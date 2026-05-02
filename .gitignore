@@ -1,0 +1,94 @@
+# ========================
+# Dependencies
+# ========================
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# ========================
+# Environment Variables
+# ========================
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+
+# ========================
+# Next.js (Frontend)
+# ========================
+.next/
+out/
+build/
+.vercel
+
+# ========================
+# Build & Production
+# ========================
+dist/
+build/
+
+# ========================
+# Debug & Logs
+# ========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# ========================
+# Testing & Coverage
+# ========================
+coverage/
+.nyc_output/
+
+# ========================
+# OS Generated Files
+# ========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ========================
+# IDE & Editor Files
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# ========================
+# Security & Keys
+# ========================
+*.pem
+*.key
+*.crt
+*.p12
+
+# ========================
+# TypeScript
+# ========================
+*.tsbuildinfo
+next-env.d.ts
+
+# ========================
+# Misc
+# ========================
+.cache/
+*.pid
+*.seed
+*.pid.lock
+package-lock.json
