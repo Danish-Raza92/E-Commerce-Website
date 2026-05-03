@@ -1,10 +1,10 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { fetchProducts, fetchCategories } from '../../lib/api';
 import ProductCard from '../../components/ProductCard';
 
-export default function ShopPage() {
+function ShopContent() {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get('category') || 'All';
 
@@ -76,5 +76,13 @@ export default function ShopPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function ShopPage() {
+  return (
+    <Suspense fallback={<div className="loading"><div className="spinner"></div></div>}>
+      <ShopContent />
+    </Suspense>
   );
 }
