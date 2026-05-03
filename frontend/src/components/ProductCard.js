@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useCart } from './CartContext';
 import { useState } from 'react';
 
@@ -24,7 +25,7 @@ export default function ProductCard({ product }) {
   return (
     <Link href={`/product/${product._id}`} className="product-card">
       <div className="product-card-image-wrap">
-        <img src={product.image} alt={product.name} className="product-card-image" />
+        <Image src={product.image} alt={product.name} width={600} height={600} className="product-card-image" />
         {discount > 0 && <span className="product-card-badge">-{discount}%</span>}
       </div>
       <div className="product-card-body">

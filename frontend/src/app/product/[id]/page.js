@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { fetchProductById, fetchRelatedProducts } from '../../../lib/api';
 import { useCart } from '../../../components/CartContext';
 import ProductCard from '../../../components/ProductCard';
@@ -47,7 +48,7 @@ export default function ProductDetailPage() {
     <div className="product-detail container section">
       <div className="product-detail-grid">
         <div>
-          <img src={product.image} alt={product.name} className="product-detail-image" />
+          <Image src={product.image} alt={product.name} width={800} height={800} className="product-detail-image" />
         </div>
         <div className="product-detail-info">
           <div className="product-detail-category">{product.category}</div>
