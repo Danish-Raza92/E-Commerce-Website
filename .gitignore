@@ -91,4 +91,3 @@ next-env.d.ts
 *.pid
 *.seed
 *.pid.lock
-package-lock.json
